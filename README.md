@@ -28,7 +28,36 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 ### Step 8: 
    Stop
 # Program:
+
+```
+
+#include <stdio.h>
+
+void binary(int a) {
+    if (a > 1) {
+        binary(a / 2);
+    }
+    printf("%d", a % 2); 
+}
+
+int main() {
+    int a;
+    scanf("%d", &a);
+    if (a == 0) {
+        printf("0 in decimal = 0 in binary");
+    } else {
+        printf("%d in decimal = ", a);
+        binary(a); 
+        printf(" in binary");
+    }
+    return 0;
+}
+
+```
+
 # Output:
+<img width="831" height="291" alt="image" src="https://github.com/user-attachments/assets/a7885bb6-8bb4-447e-8db3-69094b674223" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
